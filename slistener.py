@@ -30,8 +30,8 @@ class SListener(StreamListener):
     def on_status(self, status):
         self.output.write(status)
         self.counter += 1
-        if self.counter >= 500:
-            print("Streaming finished. 500 tweets collected.")
+        if self.counter >= 2000:
+            print("Streaming finished. 2000 tweets collected.")
             self.output.close()
         return
 
